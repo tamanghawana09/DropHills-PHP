@@ -35,8 +35,11 @@
     }
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $selectsql = "SELECT email,password FROM users";
-        $result = $conn->query($selectsql);
+        $selectsql = "SELECT email,password FROM users WHERE email = ?";
+        $stmt = $conn->prepare($selectsql);
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
         
         if($result->num_rows > 0){
             $rows = $result->fetch_assoc();
