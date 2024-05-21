@@ -1,0 +1,54 @@
+@import 'font.css';
+@import 'colors.css';
+@import 'reset.css';
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.login-container{
+    padding: 20px;
+    width: 25vw;
+    height: auto;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.8;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.login-container > h2{
+    font-size: 2rem;
+}
+.login-container > form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.login-container > form > input{
+    width: 300px;
+    padding: 10px;
+}
+.login-container > form > .btn{
+    width: 322px;
+    background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);
+    color: var(--secondary-color);
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+}
+.error{
+    color: red;
+}
