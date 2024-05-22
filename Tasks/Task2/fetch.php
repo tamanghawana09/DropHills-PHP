@@ -1,10 +1,19 @@
 <?php
 include 'connect.php';
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $name = $_POST['name'];
-    $brand = $_POST['brand'];
-    $cc = $_POST['cc'];
+
+function test_input($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $name = test_input($_POST['name']);
+    $brand = test_input($_POST['brand']);
+    $cc = test_input($_POST['cc']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -66,5 +75,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </div>
     </div>
 </body>
-
 </html>
