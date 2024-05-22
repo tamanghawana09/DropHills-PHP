@@ -42,7 +42,7 @@ body{
     padding: 10px;
 }
 .login-container > form > .btn{
-    width: 322px;
+    width: 350px;
     background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);
     color: var(--secondary-color);
     border: none;
